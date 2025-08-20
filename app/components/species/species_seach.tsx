@@ -1,4 +1,4 @@
-import { LucideLoader, LucideLoaderCircle, LucideSearch } from "lucide-react";
+import { LucideLoader, LucideSearch } from "lucide-react";
 import { useMemo } from "react";
 import { useNavigation, useSearchParams } from "react-router";
 
