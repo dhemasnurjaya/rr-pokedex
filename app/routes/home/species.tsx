@@ -2,7 +2,11 @@ import container from "~/injection_container";
 import SpeciesGrid from "~/components/species/species_grid";
 import SpeciesPagination from "~/components/species/species_pagination";
 import SpeciesSearch from "~/components/species/species_seach";
-import { useLoaderData, type LoaderFunctionArgs } from "react-router";
+import {
+  useLoaderData,
+  useNavigation,
+  type LoaderFunctionArgs,
+} from "react-router";
 import type Species from "~/domain/entities/species";
 
 const itemsPerPage = 21;
@@ -37,6 +41,7 @@ export async function loader({
 
 export default function SpeciesPage() {
   const { species, currentPage, pageCount } = useLoaderData<LoaderData>();
+
   return (
     <div className="flex flex-col grow gap-4 items-center">
       <SpeciesSearch />

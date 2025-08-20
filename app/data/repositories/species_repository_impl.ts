@@ -18,6 +18,7 @@ export default class SpeciesRepositoryImpl implements SpeciesRepository {
     offset?: number;
     searchFilter?: string;
   }): Promise<Species[]> {
+    await new Promise((resolve) => setTimeout(resolve, 500));
     const result = this.species
       .filter((s) => {
         const id = s.id;

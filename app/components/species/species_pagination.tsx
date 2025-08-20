@@ -92,7 +92,7 @@ function PaginationButton({
     case "next":
       return (
         <PaginationNext
-          href={href}
+          to={href}
           aria-disabled={isLastPage}
           className={isLastPage ? "pointer-events-none opacity-50" : ""}
         />
@@ -100,14 +100,14 @@ function PaginationButton({
     case "previous":
       return (
         <PaginationPrevious
-          href={href}
+          to={href}
           aria-disabled={isFirstPage}
           className={isFirstPage ? "pointer-events-none opacity-50" : ""}
         />
       );
     default:
       return (
-        <PaginationLink href={href} isActive={isActive}>
+        <PaginationLink to={href} isActive={isActive}>
           {label}
         </PaginationLink>
       );
