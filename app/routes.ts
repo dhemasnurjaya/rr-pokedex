@@ -11,5 +11,6 @@ export default [
     route("berries", "routes/home/berries.tsx"),
     route("moves", "routes/home/moves.tsx"),
     route("species", "routes/home/species.tsx"),
+    route("species/:id", "routes/species_detail.tsx"),
   ]),
 ] satisfies RouteConfig;
